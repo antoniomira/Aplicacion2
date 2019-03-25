@@ -19,6 +19,8 @@ Clonar el proyecto nos permite que cada integrante del grupo tenga una copia en 
 
 ## Trabajando con las ramas
 
+### Comprobar actualizaciones del repositorio remoto
+
 Una vez se ha clonado el repostorio del servidor, se tiene en local una copia idéntica de la última versión actual. Una forma de comprobar que es la versión actual es usando el siguiente comando:
 
 ```
@@ -28,6 +30,39 @@ Your branch is up to date with 'origin/master'.
 ```
 
 Si la salida que se obtiene del comando es como la siguiente, la rama es actual. En cualquier caso se tendría que hacer el comando "git pull" para obtener la información nueva del repositorio.
+
+### Descargar actualizaciones del repositiorio remoto
+
+Para descargar las últimas actualizaciones realizadas por otra gente en tu rama o en otras ramas hay que usar el comando "git pull" mencionado en el apartado anterior. 
+
+```
+$ git pull
+Already up to date.
+```
+
+Si el mensaje que se muestra: "Already up to date" significa que estás con la última versión. Si ocurre algo distinto tienes un error o se está descargando la última versión.
+
+### Crear una rama
+Una vez estamos en una rama y queremos crear otra por el motivo que sea hay que hacer el siguiente comando:
+
+```
+$ git branch <nombreRama>
+```
+
+También se puede hacer lo siguiente:
+
+```
+$ git checkout -b <nombreRama>
+```
+
+Si se usa este comando se crea la rama y se hace checkout a ella. Es mucho más rápido que hacer esto:
+
+```
+$ git branch <nombreRama>; git checkout <nombreRama>
+```
+
+El ";" sirve para lanzar dos comandos en la misma línea. De otra manera se tendrían que lanzar los comandos de uno a uno.
+
 
 
 
